@@ -40,7 +40,7 @@ def travel_world(headers, names, area, highpages, hrange, lowpages, lrange):
         dw = csv.DictWriter(file, delimiter=',',fieldnames=headerList)
         dw.writeheader()
 
-    # high rank
+    # high rank player data
     page = 1
     loading = 0
     while page <= highpages:
@@ -55,7 +55,7 @@ def travel_world(headers, names, area, highpages, hrange, lowpages, lrange):
 
         print("high rank player loading page number " + str(page))
         page += hrange
-
+    # low rank player data
     while page <= lowpages:
         second = sleep_time(0, 0, random.randint(8, 30))
         name = "https://" + area +"op.gg/ranking/ladder/page=" + str(page)
