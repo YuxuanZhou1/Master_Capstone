@@ -7,7 +7,7 @@ def get_information(my_matches, watcher, start, end, filename):
     # fetch last match detail
     for i in my_matches[start: end]:
         try:
-            match_detail = watcher.match.by_id(region='EUROPE', match_id = i)
+            match_detail = watcher.match.by_id(region='AMERICAS', match_id = i)
             participants_row = {}
             # generate match information
             participants_row['gameId'] = match_detail['info']['gameId']
